@@ -1,0 +1,31 @@
+# DocuMind AI – Ask Your Documents
+# Python dependencies for the RAG (Retrieval-Augmented Generation) project
+#
+# Install all of these with:
+#   pip install -r requirements.txt
+
+# --- Web Interface ---
+streamlit>=1.32.0,<2.0.0          # Creates the entire web UI with Python only
+
+# --- PDF Text Extraction ---
+PyMuPDF>=1.23.0,<2.0.0            # Reads PDF files and extracts text page by page
+
+# --- Sentence Embeddings (converts text to numbers for comparison) ---
+sentence-transformers>=2.6.0,<3.0.0  # Loads the AI model that creates embeddings
+torch>=2.0.0                          # Required by sentence-transformers (CPU version is fine)
+
+# --- Vector Search (finds similar text chunks quickly) ---
+faiss-cpu>=1.7.4,<2.0.0           # Facebook's library for fast similarity search
+
+# --- LLM API Client (sends questions + context to an AI model) ---
+openai>=1.12.0,<2.0.0             # OpenAI-compatible client; works with OpenAI, OpenRouter, etc.
+
+# --- Environment Variables (reads .env file safely) ---
+python-dotenv>=1.0.0,<2.0.0       # Loads API keys from .env without hardcoding them
+
+# --- Testing ---
+pytest>=7.4.0,<9.0.0              # Runs our automated tests
+pytest-mock>=3.11.0               # Helps create mock objects in tests
+
+# --- Utilities ---
+numpy>=1.24.0,<2.0.0              # Numerical operations; used by FAISS and embeddings
